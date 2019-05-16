@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- 指定连接数据库的JDBC驱动包所在位置，用了绝对路径 -->
+    <classPathEntry location="mysql-connector-java-8.0.13.jar" />
+
+    <!--配置table信息内容，targetRuntime指定采用Mybatis3的版本-->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+
+        <!-- 抑制英文注释生成，加入下面的配置控制 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <!-- 注释控制完毕 -->
+
+        <!-- 数据库连接信息 -->
+        <!--?nullCatalogMeansCurrent=true解决mysql不支持catalog的问题，使主键可以被识别-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+
+                        connectionURL="jdbc:mysql://localhost:3306/shop?nullCatalogMeansCurrent=true"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+
+        <!--javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver-->
+
+        <!--生成model类，
+            targetPackage指定model类的包名
+            targetProject指定model类放在哪个工程下面-->
+        <!-- 数据表对应的model 层  -->
+        <javaModelGenerator targetPackage="cn.myshop.domain" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- 生成mybatis的mapper.xml文件，
+            targetPackage指定mapper.xml文件的包名
+            targetProject指定mapper.xml文件放在哪个工程下-->
+        <sqlMapGenerator targetPackage="cn.myshop.domain.mapper"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 生成mybatis的mapper接口类文件，
+            targetPackage指定mapper接口类的包名
+            targetProject指定生成的接口放在哪个工程下-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.myshop.domain.mapper"  targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 要那些数据表对进生行成操作，必须要有一个. -->
+        <!--数据库的表名以及对应的Java  model类名-->
+        <!--schema="untodo"-->
+        <table tableName="cart"
+               schema="untodo"
+               domainObjectName="Cart"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+
+
+
+
+
+
+    </context>
+</generatorConfiguration>

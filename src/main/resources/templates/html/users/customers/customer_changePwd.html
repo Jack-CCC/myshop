@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+
+    <link rel="stylesheet" href="../../../css/content.css">
+    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="../../../css/breadcrumbs.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div id="brand">
+        <h1><a href="/toIndex">肖氏商城</a></h1>
+    </div>
+    <div id="userTools">
+        你好，<strong th:text="${session?.customerName}">用户名</strong>。
+        <a th:href="@{'/customer/info/'+${session?.cid}}">个人信息</a> /
+        <a th:href="@{'/cart/cid?customerId='+${session.cid}}">购物车</a> /
+        <a href="/customer/handleLogOut">登出(LOG OUT)</a>
+    </div>
+</div>
+
+<!---导航-->
+<div class="breadcrumbs">
+    <a href="/toIndex" >Home(返回主页)</a>>
+    修改密码
+</div>
+
+<!--正文-->
+<div id="content">
+    <h1>更改密码</h1>
+    <p th:text="${badmsg}" style="color: red"></p>
+    <p style="color: greenyellow" th:text="${goodmsg}"></p>
+    <div class="add_form">
+        <form action="/customer/handleChangePassword" method="post">
+            <div class="form_row">
+                旧密码:<input name="oldPassword" type="password"><br>
+            </div>
+            <div class="form_row">
+                新密码:<input name="newPassword" placeholder="新密码长度6~14位" minlength="6" maxlength="14" type="password"><br>
+            </div>
+            <div id="submit_list" style="float: right;margin: 5px">
+                <input type="submit" value="确认修改" style="width: 90px;height: 40px;background-color: deepskyblue">
+            </div>
+
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

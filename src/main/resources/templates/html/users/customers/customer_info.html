@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+
+    <!--bootstrap-->
+
+    <link rel="stylesheet" href="../../../css/content.css">
+    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="../../../css/breadcrumbs.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div id="brand">
+        <h1><a href="/toIndex">肖氏商城</a></h1>
+    </div>
+    <div id="userTools">
+        你好，<strong th:text="${session?.customerName}">用户名</strong>。
+        <a th:href="@{'/cart/cid?customerId='+${session.cid}}">购物车</a> /
+        <a href="/customer/changePassword">修改密码</a> /
+        <a href="/customer/handleLogOut">登出(LOG OUT)</a>
+    </div>
+</div>
+
+<!---导航-->
+<div class="breadcrumbs">
+    <a href="/toIndex" >Home(返回主页)</a>>
+    个人信息
+</div>
+
+<!--正文-->
+<div id="content">
+    <h1>个人信息概览</h1>
+    <p th:text="${failure}" style="color: red"></p>
+    <p style="color: greenyellow" th:text="${success}"></p>
+    <div class="add_form">
+        <form action="/customer/changeInfo" method="post">
+            <div class="form_row">
+                昵称:<input name="username" th:value="${customer.username}" required="required"><br>
+            </div>
+            <div class="form_row">
+                性别:<input name="gender" th:value="${customer.gender}" required="required" ><br>
+            </div>
+            <div class="form_row">
+                年龄:<input name="age" th:value="${customer.age}" type="number" required="required"><br>
+            </div>
+            <div class="form_row">
+                邮箱:<input name="email" th:value="${customer.email}" required="required"><br>
+            </div>
+            <div class="form_row">
+                电话:<input name="phone" th:value="${customer.phone}" required="required"><br>
+            </div>
+            <div class="form_row">
+                用户等级:<input th:value="${customer.getIsVip().equals('false')}?'普通用户':'会员'" disabled="disabled" style="width: 134px;"><br>
+            </div>
+            <div class="form_row">
+                注册日期:<input th:value="${#dates.format(customer.birthday, 'yyyy-MM-dd')}" type="date" disabled="disabled" style="width: 134px;"><br>
+            </div>
+            <div id="submit_list" style="float: right;margin: 5px">
+                <input type="submit" value="保存" style="width: 90px;height: 40px;background-color: deepskyblue">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

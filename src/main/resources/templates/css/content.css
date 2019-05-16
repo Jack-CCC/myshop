@@ -1,0 +1,187 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    color: #333;
+    background: #fff;
+
+}
+h1 {
+    margin: 0 0 20px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #666;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: #ccc;
+}
+caption{
+    text-align: left;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th {
+    font-weight: 600;
+    text-align: left;
+}
+td, th {
+    font-size: 13px;
+    line-height: 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 8px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    text-align: left;
+}
+a:link, a:visited {
+    color: #447e9b;
+    text-decoration: none;
+}
+#content {
+    position: relative;
+    padding: 20px 40px;
+    width: 100%;
+    height: auto;
+}
+#content-main {
+    float: left;
+    width: 100%;
+}
+.module {
+    border: none;
+    margin-bottom: 30px;
+    background: #fff;
+}
+.module table {
+    border-collapse: collapse;
+}
+.module table th{
+    width: 388px;
+}
+.module h2,.module caption{
+    text-align: left;
+    background: #79aec8;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    /*text-transform: uppercase;*/
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+}
+.add,.change{
+    background-color: #79aec8;
+}
+a.section:link, a.section:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.object_tools {
+    font-size: 10px;
+    font-weight: bold;
+    padding-left: 0;
+    float: right;
+    position: relative;
+    margin-top: -48px;
+}
+ul li {
+    list-style-type: square;
+    padding: 1px 0;
+}
+
+.object_tools a:link, .object-tools a:visited {
+    display: block;
+    float: left;
+    padding: 3px 12px;
+    background: #999;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+
+}
+.object_tools a {
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    padding-right: 26px;
+}
+#search_bar {
+    height: 19px;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    margin: 0;
+    vertical-align: top;
+    font-size: 13px;
+}
+input[type="submit"] {
+    border: 1px solid #ccc;
+    padding: 2px 10px;
+    margin: 0;
+    vertical-align: middle;
+    background: #fff;
+    box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
+    cursor: pointer;
+    color: #333;
+}
+#toolbar form input {
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px;
+    color: #333;
+}
+#result_list td,th input{
+
+}
+.select_list{
+    width: 362px;
+}
+.select_list h2{
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    background: #f8f8f8;
+    color: #666;
+
+}
+.form_row {
+    overflow: hidden;
+    height: 20px;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #efefef;
+    display: block;
+    margin-bottom: 6px;
+    position: relative;
+}
+.form_row input{
+    margin-left: 20px;
+}
+.add_form{
+    width: 650px;
+    margin-bottom: 40px;
+}
+
+.title_second{
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #79aec8;
+    color: #fff;
+}
+
+
+

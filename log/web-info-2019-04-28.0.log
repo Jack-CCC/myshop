@@ -1,0 +1,35 @@
+2019-04-28 00:05:40.040 [main] INFO  cn.myshop.MyshopApplication - Starting MyshopApplication on ZMVN4T8LWFXJUDF with PID 10300 (C:\Users\Administrator\IdeaProjects\myshop\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\myshop)
+2019-04-28 00:05:40.205 [main] INFO  cn.myshop.MyshopApplication - No active profile set, falling back to default profiles: default
+2019-04-28 00:05:43.499 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2019-04-28 00:05:43.552 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2019-04-28 00:05:43.643 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-28 00:05:43.650 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-28 00:05:43.724 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\code softwore\Java\jdk1.8.0_201\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\code softwore\Java\jdk1.8.0_201\bin;D:\code softwore\Java\jdk1.8.0_201\jre\bin;D:\code softwore\apache-maven-3.6.0\bin;C:\MyTools\Git\cmd;D:\code softwore\mysql-5.7.25-winx64;;.]
+2019-04-28 00:05:44.040 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-28 00:05:44.040 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3608 ms
+2019-04-28 00:05:45.528 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 00:05:46.171 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2019-04-28 00:05:46.388 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2019-04-28 00:05:46.403 [main] INFO  cn.myshop.MyshopApplication - Started MyshopApplication in 9.744 seconds (JVM running for 15.182)
+2019-04-28 00:06:52.192 [http-nio-8084-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-28 00:06:52.194 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-04-28 00:06:52.211 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2019-04-28 00:07:39.850 [http-nio-8084-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-28 14:33:42.029 [main] INFO  cn.myshop.MyshopApplication - Starting MyshopApplication on ZMVN4T8LWFXJUDF with PID 7536 (C:\Users\Administrator\IdeaProjects\myshop\target\classes started by Administrator in C:\Users\Administrator\IdeaProjects\myshop)
+2019-04-28 14:33:42.065 [main] INFO  cn.myshop.MyshopApplication - No active profile set, falling back to default profiles: default
+2019-04-28 14:33:46.366 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2019-04-28 14:33:46.397 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2019-04-28 14:33:46.413 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-28 14:33:46.413 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-28 14:33:46.429 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\code softwore\Java\jdk1.8.0_201\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\code softwore\Java\jdk1.8.0_201\bin;D:\code softwore\Java\jdk1.8.0_201\jre\bin;D:\code softwore\apache-maven-3.6.0\bin;C:\MyTools\Git\cmd;D:\code softwore\mysql-5.7.25-winx64;;.]
+2019-04-28 14:33:46.644 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-28 14:33:46.645 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4228 ms
+2019-04-28 14:33:47.958 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-28 14:33:48.614 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2019-04-28 14:33:48.820 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2019-04-28 14:33:48.827 [main] INFO  cn.myshop.MyshopApplication - Started MyshopApplication in 9.214 seconds (JVM running for 12.422)
+2019-04-28 14:40:06.256 [http-nio-8084-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-28 14:40:06.259 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-04-28 14:40:06.357 [http-nio-8084-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 97 ms
+2019-04-28 14:43:13.804 [http-nio-8084-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-28 14:43:13.999 [http-nio-8084-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

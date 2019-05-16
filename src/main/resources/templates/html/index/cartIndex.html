@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/breadcrumbs.css">
+
+    <link rel="stylesheet" href="../../css/content.css">
+
+    <style type="text/css" rel="stylesheet">
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+            text-align: center
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+            text-align: center
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div id="brand">
+        <h1><a href="/toIndex">肖氏商城</a></h1>
+    </div>
+    <div id="userTools">
+        你好，<strong th:text="${session?.customerName}">游客甲</strong>。
+        <a th:href="@{'/customer/info/'+${session?.cid}}">个人信息</a> /
+        <a href="/customer/changePassword">修改密码</a> /
+        <a href="/customer/handleLogOut">用户登出</a>
+    </div>
+</div>
+
+<!---导航-->
+<div class="breadcrumbs">
+    <a href="/toIndex" style="color: white">Home(返回主页)</a>>
+    你的购物车
+</div>
+
+<div class="container">
+    <table style="margin-top: 35px">
+        <thead>
+        <tr  style="text-align: center">
+            <th>序号</th>
+            <th>商品名</th>
+            <th>商品单价</th>
+            <th style="width: 200px">商品数量</th>
+            <th>合计</th>
+        </tr>
+        </thead>
+        <tbody style="text-align: center">
+        <tr th:each="cart,cartStat:${carts}">
+            <td th:text="${cartStat.count}"></td>
+            <td th:text="${cart.id}"></td>
+            <td th:text="${cart.commodityPrice}"></td>
+            <td style="text-align: center">
+                <a th:href="${'/cart/delCommodity?commodityId='+cart.commodityId}">
+                    <button style="font-size: 20px">-</button>
+                </a>
+                &nbsp;&nbsp;
+                <span th:text="${cart.commodityNum}" style="font-size: 20px"></span>
+                &nbsp;&nbsp;
+                <a th:href="${'/cart/add?commodityId='+cart.commodityId}">
+                    <button style="font-size: 20px">+</button>
+                </a>
+            </td>
+            <td th:text="${#numbers.formatDecimal(cart.getPay()*100/100.0,1,2)}" width="100px"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <span  th:text="${'会员折扣后'+ #numbers.formatDecimal(zhekou*100/100.0,1,2)}" th:if="${totalPay}"></span>
+            </td>
+            <td th:text="${#numbers.formatDecimal(totalPay*100/100.0,1,2)}"></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <a th:href="${'/cart/del?customerId='+session.cid}">
+                    <button  style="background-color: tomato;width: 100px;height: 40px;color: white">清空购物车</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

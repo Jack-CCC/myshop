@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+
+    <link rel="stylesheet" href="../../../css/content.css">
+    <link rel="stylesheet" href="../../../css/header.css">
+    <link rel="stylesheet" href="../../../css/breadcrumbs.css">
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div id="brand">
+        <h1><a href="/toIndex">肖氏商城</a></h1>
+    </div>
+    <div id="userTools">
+        你好，
+        欢迎你的加入！
+    </div>
+</div>
+
+<!---导航-->
+<div class="breadcrumbs">
+    <a href="/toIndex" >Home(返回主页)</a>>
+    用户注册
+</div>
+
+<!--正文-->
+<div id="content">
+    <h1>注册新用户</h1>
+    <p th:text="${badmsg}" style="color: red"></p>
+    <div class="add_form">
+        <form action="/customer/handleRegister" method="post">
+            <div class="form_row">
+                用户名:<input name="username" placeholder="用户名长度须在2-8位之间" ><br>
+            </div>
+            <div class="form_row">
+                密&nbsp;&nbsp;&nbsp;码:<input name="password" placeholder="密码长度须在6到14位之间" minlength="6" maxlength="14" type="password"><br>
+            </div>
+            <div id="submit_list" style="float: right;margin: 5px">
+                <input type="submit" value="注册" style="width: 90px;height: 40px;background-color: deepskyblue">
+            </div>
+
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

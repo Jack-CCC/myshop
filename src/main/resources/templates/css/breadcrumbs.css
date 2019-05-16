@@ -1,0 +1,23 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+.breadcrumbs {
+    background: #79aec8;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #c4dce8;
+    text-align: left;
+    overflow: hidden;
+}
+a:link, a:visited {
+    color: #447e9b;
+    text-decoration: none;
+}
+
+.breadcrumbs a {
+    color: #fff;
+}
+
+
